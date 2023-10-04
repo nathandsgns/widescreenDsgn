@@ -1,0 +1,135 @@
+.s{
+    width:100%;
+    height:35vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    background:url(https://images.unsplash.com/photo-1694110952701-82f98337a9c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1461&q=80);
+    background-position: center;
+    background-size: cover;
+}
+.opacity{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    background:rgba(0,0,0,.5);
+}
+.nav{
+    width: auto;
+    height:35vh;
+    padding:0 3vw;
+    display:flex;
+    flex-direction:column;
+    align-items:space-around;
+    justify-content:space-around;
+
+    background:black;
+    text-aligN:center;
+
+    position:absolute;
+    top:0%;
+    right: 0%;
+    z-index:1;
+}
+.nav-item{
+    font-size: 1.25rem;
+    text-decoration:none;
+    transition:color 0.5s ease;
+}
+.nav-item:hover{
+    color:gray;
+}
+
+.btn{
+    width:2rem;
+    height:2rem;
+    margin:3vw;
+
+    background:white;
+    border:none;
+
+    position:absolute;
+    top:0%;
+    left:0%;
+    z-indeX:1;
+}
+
+.title{
+    padding:20vh 0 0 0;
+    margin:2vh 3vw;
+    font-size: 3rem;
+}
+.descr{
+    width:50%;
+    margin:0 0 2vh 3vw;
+    font-size: .875rem;
+}
+
+
+.s1{
+    width:100%;
+    height:auto;
+
+    background:black;
+}
+
+.contents1{ 
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:space-around;
+    justify-content:space-around;
+}
+.content1{
+    width:50vh;
+    height:60vh;
+    margin:5vh;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    justify-content:flex-end;
+
+    background:url(https://images.unsplash.com/photo-1694110952701-82f98337a9c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1461&q=80);
+    background-size: cover;
+    background-position: cover;
+}
+.opacity1{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    justify-content:flex-end;
+
+    background:rgba(0,0,0,.7);
+    transition:background 0.5s ease;
+}
+.title1{
+    width:80%;
+    margin:0 2vh;
+    text-align:right;
+    font-size: 2rem;
+    opacity:1;
+    transition:opacity 0.5s ease;
+}
+.descr1{
+    width:80%;
+    margin:2vh 2vh;
+    text-align:right;
+    font-size: .875rem;
+    font-style: italic;
+    opacity:1;
+    transition:opacity 0.5s ease;
+}
+
+.content1:hover .opacity1{
+    background:rgba(0,0,0,0);
+}
+.content1:hover .descr1, .content1:hover .title1{
+    opacity:0;
+}
