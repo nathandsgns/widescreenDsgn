@@ -15,6 +15,43 @@ body{
     overflow-x: hidden;
 }
 
+
+.btn{
+    width:2rem;
+    height:2rem;
+    margin:3vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:white;
+    border:none;
+    border-radius:1rem;
+
+    position:absolute;
+    top:0%;
+    left:0%;
+    z-indeX:1;
+
+    transition:background 0.5s ease;
+}
+.btn-arrow{
+    width:.25rem;
+    height:.25rem;
+
+    border-top:2px solid black;
+    border-left:2px solid black;
+    transition:border-left 0.5s ease, border-right 0.5s ease;
+}
+.btn:hover{
+    background:gray;
+}
+.btn:hover .btn-arrow{
+    border-top:2px solid white;
+    border-left:2px solid white;
+}
+
+
 .f{
     width:100%;
     height:auto;
