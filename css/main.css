@@ -6,7 +6,9 @@
         opacity:1;
     }
 }
-
+body{
+    overflow-x:hidden ;
+}
 .s{
     width:100%;
     height:100vh;
@@ -171,9 +173,57 @@
         display:none;
     }
 
-    .nava{
+    .sidebar{
+        width:auto;
+        height:auto;
+        display:flex;
+        
+        position:absolute;
+        right:0;
+        top:0;
+        animation:fadeIn 2s ease;
+    }
+    #toggle-sidebar{
+        display:none;
+    }
+    .sidebar label{
+        width:2rem;
+        height:2rem;
+        margin:5vw;
         display:flex;
         flex-direction:column;
+        align-items:center;
+        justify-content:space-around;
+
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:2;
+    }
+    .label-pt{
+        width:90%;
+        height:.25rem;
+
+        border-radius:.25rem;
+        background:white;
+    }
+
+    .nava{
+        width:0%;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-around;
+
+        background:rgba(0,0,0,.8);
+        opacity:0;
+
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:1;
+        transition:right 0.5s ease,opacity 1s ease,width 1s ease;
     }
     .nav-itema{
         margin:2vh 3vw;
@@ -189,74 +239,23 @@
         color:gray;
     }
     .socialsa{
+        width:90%;
         margin:0 0 3vw 0;
-        display:flex;
-        flex-direction:column;
-    }
-    .sociala{
-        margin:2vh 3vw;
-    }
-
-
-    .sidebar{
-        width:auto;
-        height:auto;
-        display:flex;
-        
-        position:absolute;
-        right:0;
-        top:0;
-    }
-    #toggle-sidebar{
-        display:none;
-    }
-    .sidebar label{
-        width:2rem;
-        height:2rem;
-        margin:5vw;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:space-around;
-
-        position:absolute;
-        top:0;
-        right:0;
-        z-index:2;
-    }
-    .label-pt{
-        width:90%;
-        height:.25rem;
-
-        border-radius:.25rem;
-        background:white;
-    }
-
-    .nava{
-        width:100vw;
-        height:100vh;
-        display:flex;
-        align-items:center;
-        justify-content:space-around;
-
-        background:rgba(0,0,0,.8);
-
-        position:absolute;
-        top:0;
-        right:-100vw;
-        z-index:1;
-        transition:right 0.5s ease;
-    }
-    .socialsa{
-        width:90%;
         display:flex;
         flex-direction:row;
         align-items:center;
         justify-content:space-around;
     }
+    .sociala{
+        margin:2vh 3vw;
+    }
 
     .toggle-sidebar:checked ~ .nava{
-        right:0;
+        width:100vw;
+        display:flex;
+        opacity:1;
+
+        transition:right 0.5s ease,opacity 1s ease,width 1s ease;
     }
 }
 .logo, .title-descr, .toggle-sidebar{
@@ -389,10 +388,11 @@
     height:auto;
     display:flex;
     flex-direction:column;
+    align-items:flex-start;
 }
 .title2{
     margin:0 0 2vh 0;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 .descr2{
     font-size:.875rem;
@@ -435,9 +435,31 @@
     background-size: cover;
 
 }
-
 .content2a:hover .opacity2{
     background:rgba(0,0,0,.7);
+}
+@media only screen and (max-width:800px){
+    .contents2{
+        flex-direction:column;
+    }
+    .content2{
+        width:90%;
+        align-items:center;
+    }
+    .title2,.descr2,.descr2a{   
+        width:90%;
+        margin:0;
+        text-align: center;
+    }
+    .title2{
+        margin:0 0 3vh 0;
+    }
+    .descr2{
+        margin:0 0 1vh 0;
+    }
+    .content2a{
+        margin:2vh;
+    }
 }
 
 
@@ -447,13 +469,13 @@
     height:auto;
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:space-around;
 
     background:black;
 }
 
 .pt3a, .pt3b{
-    width:45%;
+    width:49%;
     height:70vh;
 
     display:flex;
@@ -463,8 +485,10 @@
 }
 
 .content3{
-    width:50vh;
-    height:50vh;
+    width:40vw;
+    height:40vw;
+    max-width: 400px;
+    max-height: 400px;
 
     background:url(https://images.unsplash.com/photo-1694110952701-82f98337a9c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1461&q=80);
     background-position: center;
@@ -505,6 +529,14 @@
     }
     .pt3a, .pt3b{
         width:100%;
+    }
+    .subtitle3,.title3,.descr3,.btn3{
+        text-align:center;
+    }
+    .content3{
+        width:100%;
+        max-width:none;
+        box-shadow:none;
     }
 }
 
